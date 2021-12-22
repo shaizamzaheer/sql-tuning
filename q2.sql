@@ -12,5 +12,5 @@ SET @v8 = 'MAT';
 
 -- 2. List the names of students with id in the range of v2 (id) to v3 (inclusive).
 explain
-SELECT name FROM Student WHERE id BETWEEN @v2 AND @v3;
+SELECT name FROM Student WHERE id >= @v2 and id <= @v3;
 -- because the index is already there and it is unique, it can use a range type, and it looks at only relevant rows
